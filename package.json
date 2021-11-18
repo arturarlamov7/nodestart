@@ -1,13 +1,17 @@
 {
   "name": "nodestart",
   "version": "1.0.0",
-  "description": "",
+  "description": "nodejs tutorial package",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "js"
+  ],
+  "author": "Artur <my@mail.ee",
   "license": "ISC",
   "dependencies": {
     "nodemon": "^2.0.15"
