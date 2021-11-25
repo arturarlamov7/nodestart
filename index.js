@@ -32,6 +32,17 @@ const server = http.createServer((req, res) => {
                     res.end(content)
                 }
             )
+        } else if (req.url === '/api/users') {
+            res.writeHead(200, {
+                'Content-Type': 'text/json'
+            })
+
+            const users = [
+                {name: 'Vasya', age: 20},
+                {name: 'Elena', age: 23}
+            ]
+
+            res.end(JSON.stringify(users))
         }
     } else if (req.method === 'POST') {
         const body = []
@@ -47,7 +58,7 @@ const server = http.createServer((req, res) => {
             const message = body.toString().split('=')[1]
 
             res.end(`
-                <h1>Ваше сообщение: ${message}</h1>
+                <h1>Ваше сообшение: ${message}</h1>
             `)
         })
     }
